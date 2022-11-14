@@ -1,0 +1,5 @@
+django==3.0
+django-braces
+django-crispy-forms
+waitress
+openpyxl

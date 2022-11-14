@@ -1,0 +1,7 @@
+<p>DESEJA REALMENTE DELETAR ESTE DADO "{{item}}"?</p>
+
+<form method="POST" action="">{% csrf_token %}
+    <input type="submit" value="Confirmar">
+</form>
+
+<a href="{% url 'list'%}">Cancelar</a>

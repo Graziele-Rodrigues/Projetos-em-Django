@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Blog Project</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+<!-- template tags below -->
+  <link href="{% static 'style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-default fixed-top shadow shadow-inset">
+    <div class="container">
+      <a class="navbar-brand" href="/">Blog</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+  <header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active" style="background-image: url('https://happycodeschool.com/wp-content/uploads/2020/07/original-069d5ac531e0780b1ad996128fc747bd.jpg')">
+          <div class="carousel-caption d-none d-md-block">
+            <h2>OTTO</h2>
+            <p>Introduzindo crianças no mundo da programação e eletrônica</p>
+          </div>
+        </div>
+  </header>
+ <!-- template tags below -->
+  <div class="container">
+    {% block content %}
+
+    {% endblock content %}
+
+    </div>
+  <footer class="py-5 shadow-xs shadow-inset">
+    <div class="container">
+      <p class="m-0 text-center ">Copyright &copy; Your Website 2021</p>
+    </div>
+  </footer>
+  <!-- Bootstrap core JavaScript -->
+  <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+
+</html> 

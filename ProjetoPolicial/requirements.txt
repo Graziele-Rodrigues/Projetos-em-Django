@@ -1,0 +1,2 @@
+django==3.2
+grappelli==2.15.1

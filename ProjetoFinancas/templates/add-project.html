@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container">
+        <form action="" method="POST">{% csrf_token %}
+            {{form}}
+            <label for="categoryInput">Categorias de despesas</label>
+            <input type="text" name="categoryInput" id="categoryInput">
+            <input type="hidden" name="categoriesString">
+
+            <ul id="categoriesContainer" class="category">
+                <li class="category"> 
+                    <span class="name">Develop</span>
+                    <span onclick="removeCategory(this)" class="btnRemove bold">X</span>        
+                </li>
+            </ul>
+
+            <button type="submit" class="btn"> Criar Carteira</button>
+        </form>
+    </div>
+{% endblock %}

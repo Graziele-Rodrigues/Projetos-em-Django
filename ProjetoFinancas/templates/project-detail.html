@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <section class="section section-stats">
+        <div class="row">
+            <div class = "col s12 m12 14">
+                <div class="card-panel">
+                    <h6 class="bold"> Saldo Atual </h6>
+                    <h1 class="bold">R${{project.budget}}</h1>
+                </div>
+            </div>
+
+            <div class = "col s12 m6 14" >
+                <div class="card-panel">
+                    <h6 class="bold"> Saldo Anterior </h6>
+                    <h1 class="bold">R$ ... </h1>
+                </div>
+            </div>
+
+            <div class = "col s12 m6 14" >
+                <div class="card-panel">
+                    <h6 class="bold"> Transferências </h6>
+                    <h1 class="bold">R$ ... </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-expenses">
+        <div class="row">
+            <button class="btn waves-effect right">
+                <i class="material-icons bold-text left">add_circle</i>
+                Add despesas
+            </button>
+        </div>
+
+        <ul class="z-depth-1">
+            {% for expense in expense_list %}
+            <li>
+                <div class="card-panel expense">
+                    <div class="row">
+                        <div class="col">
+                            <span class="title bold">{{ expense.title }}</span>
+                        </div>
+
+                        <div class="col">
+                            <span class="title bold">{{expense.amount}}</span>
+                        </div>
+
+                        <div class="col">
+                            <span class="title bold">{{ expense.category }}</span>
+                        </div>
+
+                        <a href="">
+                            <i class="material-icons red-text right">close</i>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            {% endfor  %}
+        </ul>
+    </section>
+</div>
+{% endblock %}
